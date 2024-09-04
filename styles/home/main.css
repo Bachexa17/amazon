@@ -1,0 +1,24 @@
+.main {
+  display: grid;
+  grid-template-rows: 1fr;
+
+  height: 100%;
+}
+
+.product-columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr;
+  grid-template-areas:
+    "main-product-row main-product-row main-product-row";
+  gap: 1rem;
+}
+
+.main-product-row {
+  grid-area: main-product-row;
+  background-color: black;
+}
+
+.product-column {
+  background-color: cyan;
+}
