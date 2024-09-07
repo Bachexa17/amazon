@@ -23,7 +23,9 @@
   height: 2rem;
 }
 
-/* HEADER LEFT & RIGHT: BORDERS ----- */
+/* #region left & right side */
+
+/* border & border hover */
 .delivery-location,
 .language-box,
 .account-box,
@@ -33,24 +35,23 @@
   padding: 2px 10px;
   height: 100%;
   cursor: pointer;
+
+  &:hover {
+    border-color: rgb(60, 60, 60);
+  }
 }
 
-.delivery-location:hover,
-.language-box:hover,
-.account-box:hover,
-.order-details-box:hover,
-.cart-box:hover {
-  border-color: rgb(60, 60, 60);
-}
+/* #endregion */
 
-/* HEADER LEFT ----- */
-/* HEADER LEFT: AMAZON LOGO*/
+/* #region left side */
+
+/* amazon logo */
 .amazon-logo-white {
   width: 6rem;
   cursor: pointer;
 }
 
-/* HEADER LEFT: DELIVERY LOCATION */
+/* delivery location */
 .delivery-location {
   display: flex;
   flex-direction: column;
@@ -67,8 +68,11 @@
   font-weight: 500;
 }
 
-/* HEADER MIDDLE ----- */
-/* HEADER MIDDLE: SEARCH BOX */
+/* #endregion */
+
+/* #region middle side */
+
+/* search box */
 .search-icon {
   height: 60%;
   background-color: rgb(48, 48, 48);
@@ -86,14 +90,17 @@
   border: solid 1px white;
   border-left: none;
   border-radius: 20px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-.search-input:focus {
-  outline: none;
-}
+/* #endregion */
 
-/* HEADER RIGHT ------ */
-/* HEADER-RIGHT: LANGUAGE BOX */
+/* #region right side */
+
+/* language details */
 .language-box {
   display: flex;
   align-items: center;
@@ -109,7 +116,7 @@
   font-size: 15px;
 }
 
-/* HEADER-RIGHT: ACCOUNT & ORDER BOX */
+/* account & order details */
 .account-box,
 .order-details-box {
   display: flex;
@@ -129,7 +136,7 @@
   font-weight: 500;
 }
 
-/* HEADER-RIGHT: CART BOX */
+/* cart details */
 .cart-box {
   display: flex;
   align-items: center;
@@ -153,3 +160,5 @@
   top: -4px;
   color: orange;
 }
+
+/* #endregion */
