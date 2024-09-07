@@ -47,6 +47,7 @@
 /* HEADER LEFT: AMAZON LOGO*/
 .amazon-logo-white {
   width: 6rem;
+  cursor: pointer;
 }
 
 /* HEADER LEFT: DELIVERY LOCATION */
