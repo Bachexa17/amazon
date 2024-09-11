@@ -5,12 +5,22 @@
   height: 100%;
 }
 
-.products-container {
+.product-container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 200px);
+  justify-content: center;
+
+  gap: 1rem;
+  margin: 2rem;
 }
 
-.products-container div {
+.product {
   border: 1px solid black;
+  width: 200px;
+  height: 350px;
+}
+
+.product-img {
+  height: 60%;
+  width: 100%;
 }
