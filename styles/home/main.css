@@ -7,20 +7,55 @@
 
 .product-container {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
+  grid-template-columns: repeat(6, 180px);
   justify-content: center;
 
   gap: 1rem;
-  margin: 2rem;
+  margin: 2rem 0rem;
 }
 
 .product {
   border: 1px solid black;
-  width: 200px;
+  width: 180px;
   height: 350px;
 }
 
 .product-img {
   height: 60%;
   width: 100%;
+}
+
+.product-info {
+  height: 40%;
+
+  background-color: cyan;
+  margin-top: -4px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.product-name,
+.product-rating,
+.product-price,
+.product-buttons {
+  margin-left: 6px;
+}
+
+.product-buttons {
+  padding-bottom: 10px;
+}
+
+.quantity-selector,
+.add-cart-button {
+  color: black;
+  background-color: orange;
+  border: none;
+  padding: 6px 14px;
+
+  font-weight: 500;
+
+  border-radius: 50px;
+  cursor: pointer;
 }
