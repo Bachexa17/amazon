@@ -5,18 +5,23 @@ function convertCent(number) {
 }
 
 renderHTML();
+ratingStyle();
 
 function renderHTML() {
   let html = '';
 
   productData.forEach(product => {
     html += `
-    <div class="product">
+    <div class="product" data-product-id=${product.id}>
       <img class="product-img" src="${product.image}">
       <div class="product-info">
-        <span class="product-name">${product.name} ${product.name} ${product.name}</span>
+        <span class="product-name">${product.name}</span>
         <div class="product-rating">
-          <span class="rating">${product.ratings.ratingFloat}</span>
+          <span class="rating">${product.ratings.ratingNumber / 10}</span>  
+          <div class="rating-box">
+            <img class="stars-img" src="images/home/5-star.png">
+            <div class="rating-box-fill"></div>
+          </div>
           <span class="amount">${product.ratings.amount}</span>
         </div>
         <span class="product-price">$${convertCent(product.priceCent)}</span>
@@ -41,3 +46,15 @@ function renderHTML() {
 
   document.querySelector('.product-container').innerHTML = html;
 };
+
+function ratingStyle() {
+  document.querySelectorAll('.product').forEach(product => {
+    const productId = product.dataset.productId;
+    productData.forEach(item => {
+      if (item.id === productId) {
+        const ratingBoxFill = product.querySelector('.rating-box-fill');
+        ratingBoxFill.style.width = `${item.ratings.ratingNumber - 3}px`;
+      }
+    })
+  })
+}
