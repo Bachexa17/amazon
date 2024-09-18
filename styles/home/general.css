@@ -7,15 +7,16 @@ body {
   background-color: rgb(60, 60, 60);
 }
 
+.container {
+  margin-top: 10vh;
+  height: 90vh;
+}
+
+/* this is so anchor element text doesnt turn blue color */
 a,
 a:visited,
 a:hover,
 a:active {
   color: inherit;
   text-decoration: none;
-}
-
-.container {
-  margin-top: 10vh;
-  height: 90vh;
 }

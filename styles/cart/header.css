@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4rem;
+
+  z-index: 100;
+  background-color: black;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: space-evenly;
+}
+
+.amazon-logo-white {
+  width: 6rem;
+  cursor: pointer;
+}
