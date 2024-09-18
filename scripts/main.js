@@ -44,16 +44,15 @@ function renderHTML() {
     `;
   });
 
-  document.querySelector('.product-container').innerHTML = html;
+  document.querySelector('.products-container').innerHTML = html;
 };
 
 function ratingStyle() {
   document.querySelectorAll('.product').forEach(product => {
     const productId = product.dataset.productId;
     productData.forEach(item => {
-      if (item.id === productId) {
-        const ratingBoxFill = product.querySelector('.rating-box-fill');
-        ratingBoxFill.style.width = `${item.ratings.ratingNumber - 3}px`;
+      if (productId === item.id) {
+        product.querySelector('.rating-box-fill').style.width = `${item.ratings.ratingNumber - 3}px`;
       }
     })
   })
